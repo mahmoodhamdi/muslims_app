@@ -43,7 +43,7 @@ class SiraaView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return ContentItem(
                     onTap: () {
-                      Get.toNamed(kSiraaContent[index]);
+                      Get.toNamed(kGetSiraaContentList[index]);
                     },
                     contentName: kSiraaContent[index],
                   );
