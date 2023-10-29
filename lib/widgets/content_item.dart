@@ -18,7 +18,7 @@ class ContentItem extends StatelessWidget {
         height: MediaQuery.of(context).size.height / 4 - 64,
         width: MediaQuery.of(context).size.width / 2 - 48,
         decoration: BoxDecoration(
-            color: kSecondaryColor,
+            color: kThirdColor,
             boxShadow: const [
               BoxShadow(
                   blurRadius: 5,

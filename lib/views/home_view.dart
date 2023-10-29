@@ -10,36 +10,34 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          const SizedBox(
-            height: 100,
-          ),
-          Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height - 132,
-              child: GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: kContentList.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    mainAxisSpacing: 64,
-                    crossAxisSpacing: 16,
-                    crossAxisCount: 2),
-                itemBuilder: (context, index) {
-                  return ContentItem(
-                    onTap: () {
-                      Get.toNamed(kContentGetList[index]);
-                    },
-                    contentName: kContentList[index],
-                  );
-                },
-              ),
-            ),
-          ),
-        ],
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: kSecondaryColor,
+        centerTitle: true,
+        title: Text(
+          "✨صل على النبي",
+          style: TextStyle(
+              fontSize: 24, fontWeight: FontWeight.w800, color: kPrimaryColor),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 64),
+        child: GridView.builder(
+          shrinkWrap: true,
+          clipBehavior: Clip.none,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: kContentList.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              mainAxisSpacing: 64, crossAxisSpacing: 16, crossAxisCount: 2),
+          itemBuilder: (context, index) {
+            return ContentItem(
+              onTap: () {
+                Get.toNamed(kContentGetList[index]);
+              },
+              contentName: kContentList[index],
+            );
+          },
+        ),
       ),
     );
   }
