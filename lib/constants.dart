@@ -9,7 +9,7 @@ List<String> kContentList = [
   "القرآن الكريم",
   "الحديث",
   "التفسير",
-  "السيرة",
+  "سير و قصص",
   "المسبحة",
 ];
 List<String> kContentGetList = [
@@ -165,4 +165,10 @@ List<String> kQuranContentList = [
   "الإخلاص",
   "الفلق",
   "الناس",
+];
+List<String> kSiraaContent = [
+  "قصص الأنبياء",
+  "قصص الصحابة",
+  "قصص التابعين",
+  "قصص متنوعة",
 ];
